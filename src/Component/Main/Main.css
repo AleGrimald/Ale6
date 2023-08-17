@@ -1,0 +1,16 @@
+.main  {
+    height: 550px;
+    padding: 3rem 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-image: url(./muniecoquini6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+}
+
