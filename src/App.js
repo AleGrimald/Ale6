@@ -9,13 +9,15 @@ function App() {
   const [sorteos, setSorteo]= useState([]);
   const [colorFondo, setColorFondo] = useState([]);
   const [formulario, setFormulario] = useState(false);
+  const [boton, setBoton] = useState(true);
+  const [boton2, setBoton2] = useState(false);
 
   //Lista con datos de botones
   const listaBtn = [
-    {nombre: "Inicio", link:"http://localhost:3000/", tipo:"submit"},
-    {nombre: "Ver Quini", link:"http://localhost:3000/", tipo:"submit"},
-    {nombre: "Apostar", link:"http://localhost:3000/", tipo:"submit"},
-    {nombre: "Contacto", link:"http://localhost:3000/", tipo:"submit"}
+    {nombre: "Inicio",    link:"https://aleg6.netlify.app/", tipo:"submit"},
+    {nombre: "Ver Quini", link:"https://aleg6.netlify.app/", tipo:"submit"},
+    {nombre: "Apostar",   link:"https://aleg6.netlify.app/", tipo:"submit"},
+    {nombre: "Contacto",  link:"https://aleg6.netlify.app/", tipo:"submit"}
   ];
   
   //Genera un array de 6 elementos aleatorios
@@ -52,31 +54,31 @@ function App() {
     for (let i = 0; i < 6; i++) {
       apuesta[i]= parseInt(apuesta[i]);
     }
-    setColorFondo(["","","","","",""])
+    setColorFondo([]);
     generarSorteo();
     setApuestas(apuesta);
   }
 
   //Verifica si hay coincidencias entre apuestas y sorteos
   const verificar=(event)=>{
-    let colores=[];
+    let colores=['#808080','#808080','#808080','#808080','#808080','#808080'];
     event.preventDefault();
-    let cont=0;
-    for (let i = 0; i < 6; i++) {
-      for (let j = 0; j < 6; j++) {
-        if(sorteos[i] === apuestas[j])
-        {
-          colores[i]="#008000"
-          cont=cont+1;
-        }
+    for (let i = 0; i < 6; i++)
+    {
+      for (let j = 0; j < 6; j++) 
+      {
+        sorteos[i] === apuestas[j] ? colores[i]='#00F900': <></>;
       }
     }
     setColorFondo(colores);
+    setBoton2(!boton2);
   }
 
   //Controla cuando se muestra un formulario
-  const controlarForm=()=>{
-    setFormulario(!formulario)
+  const controlBoton=()=>{
+    setFormulario(!formulario);
+    setBoton(!boton);
+    
   }
 
   return (
@@ -89,8 +91,11 @@ function App() {
         sorteos={sorteos}
         verificar={verificar}
         colorFondo={colorFondo}
-        controlarForm={controlarForm}
+        controlBoton={controlBoton}
+        controlBoton2={setBoton2}
         formulario={formulario}
+        boton={boton}
+        boton2={boton2}
       />
       <Footer
 

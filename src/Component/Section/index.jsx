@@ -4,7 +4,7 @@ import Button from "../Button"
 import { useState } from "react";
 
 const Seccion=(props)=>{
-    const {registrarApuesta,controlarForm}= props;
+    const {registrarApuesta,controlBoton,controlBoton2, boton, boton2}= props;
     
     const [num1, setNum1]= useState("");
     const [num2, setNum2]= useState("");
@@ -24,6 +24,22 @@ const Seccion=(props)=>{
             num6
         ]
         registrarApuesta(numeros);
+        controlBoton();
+    }
+
+    const limpiarInp=()=>{
+        setNum1("");
+        setNum2("");
+        setNum3("");
+        setNum4("");
+        setNum5("");
+        setNum6("");
+        controlBoton();
+    }
+
+    const cambiarBoton=()=>{
+        limpiarInp();
+        controlBoton2(!boton2)
     }
     
     return <section className="seccion">
@@ -34,8 +50,18 @@ const Seccion=(props)=>{
             <Input clase="carton_num" tipo="text" valor={num3} cambiarValor={setNum3} requerido={true} />
             <Input clase="carton_num" tipo="text" valor={num4} cambiarValor={setNum4} requerido={true} />
             <Input clase="carton_num" tipo="text" valor={num5} cambiarValor={setNum5} requerido={true} />
-            <Input clase="carton_num" tipo="text" valor={num6} cambiarValor={setNum6} requerido={true} />
-            <Button clase="boton_apostar" tipo="submit" nombre="Confirmar Apuesta" click={controlarForm}/>
+            <Input clase="carton_num" tipo="text" valor={num6} cambiarValor={setNum6} requerido={true} />            
+            
+           <div className="contenedor_botones">
+            {boton===true
+                ?<Button clase="boton_apostar" tipo="submit" nombre="Confirmar Jugada"/>
+                :<></>
+            }
+            {boton2===true
+                ?<Button clase="boton_apostar" nombre="¿Volver a Jugar?" click={cambiarBoton}/>
+                :<></>
+            }
+           </div>
         </form>
     </section>
 }

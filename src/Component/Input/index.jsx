@@ -1,4 +1,3 @@
-import "./Input.css"
 
 const Input = (props) =>{
     const{clase, tipo, valor, cambiarValor, fondo, requerido,soloLectura, focus}=props
