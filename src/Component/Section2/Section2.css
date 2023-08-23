@@ -64,7 +64,7 @@
 @media (min-width: 319px) and (max-width: 424px){
     .seccion{
         width: 100%;
-        height: 50%;
+        height: 100vh;
     }
 
     .carton{
