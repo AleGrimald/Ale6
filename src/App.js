@@ -97,9 +97,12 @@ function App() {
         boton={boton}
         boton2={boton2}
       />
-      <Footer
+      <Footer>
+        <h2>Pagina derechos reservados bla bla bla</h2>
+        
+      
+       </Footer>
 
-      />
     </div>
   );
 }
