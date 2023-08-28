@@ -22,7 +22,7 @@
         height: 75vh;
         width: 100%;
         justify-content: space-around;
-        align-items: center;
+        align-items: start;
         padding: 0;
         gap: 0;
         background-position-y: center;
