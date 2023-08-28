@@ -1,57 +1,69 @@
 .seccion{
-    width: 40%;
-    height: 100%;
+    width: 30%;
+    height: 90%;
     display: flex;
     flex-flow: column wrap;
+    justify-content:center;
     align-items: center;
-    justify-content: center;
+    box-shadow: 0 0 15px 5px orange;
     border-radius: 15px;
-    border: 2px solid black;
-    gap: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     background: linear-gradient(180deg, rgba(250, 228, 28, 0.84) 20%, rgb(221, 85, 22) 80%);
-}
-
-.carton{
-    width: 100%;
-    height: 80%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .8rem;
-    
 }
 
 .titulo{
     width: 100%;
-    height: 15%;
-    padding-top: .5rem;
+    height: 20%;
+    font-family: 'Caladea', serif;
     font-size: 24px;
     font-weight: 700;
-    color: rgba(29, 27, 27);
+    color: rgba(29, 27, 27, 0.9);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.carton{
+    width: 80%;
+    height: 75%;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor_botones{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carton_num{
-    width: 45%;
-    height: 50px;
-    
-    font-size: 25px;
+    width: 34%;
+    padding: .8rem;
+    font-family: 'Caladea', serif;
+    font-size: 20px;
     font-weight: 700;
     text-align: center;
-
-    border-radius: 20px;
-    outline: none;
+    border-radius: 15px;
+    outline: none;  
+}
+.carton_num:focus{
+    box-shadow: 1px 1px 10px 2px rgb(88, 88, 88);
+}
+.carton_num::-webkit-inner-spin-button, 
+.carton_num::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 .boton_apostar{
-    width: 50%;
-    height: 2rem;
+    padding: .6rem 2rem;
     border-radius: 15px;
-
-    font-size: 16px;
+    font-family: 'Caladea', serif;
+    font-size: 20px;
     font-weight: 600;
-
     transition: .08s all;
 }
 .boton_apostar:active{
@@ -61,83 +73,44 @@
     transform: scale(1.2);
 }
 
-@media (min-width: 319px) and (max-width: 424px){
+@media (min-width: 412px) and (max-width: 915px){
     .seccion{
-        width: 100%;
-        height: 40%;
-        background: linear-gradient(180deg, rgba(232, 245, 46, 0.75) 40%, rgb(223, 145, 62) 80%);
+        width: 40%;
+        height: 90%;
+        
         border: none;
-        box-shadow: 0px 5px 10px rgb(255, 242, 0);
-
+        box-shadow: 0px 0px 25px rgb(255, 242, 0);
     }
 
-    .carton{
-        height: 65%;
-        gap: .5rem; 
-    }
-    
     .titulo{
-        padding: 0;
-        height: auto;
-        font-size: 17px;
-        font-weight: 700;
-        color: rgb(0, 0, 0);
-    }
-    
-    .carton_num{
-        width: 25%;
-        height: 0;
-        padding: .8rem 0;
-        font-size: 16px;
-        font-weight: 500;
-        border: none;
-        box-shadow: 0 2px rgb(124, 123, 123);
-    }
-    .carton_num:focus{
-        box-shadow: 2px 2px 7px 2px rgb(88, 88, 88);
-    }
-    
-    .boton_apostar{
-        width: 55%;
-        margin-top: 1rem;
-        height: 1.8rem;
-        font-size: 16px;
-        font-weight: 500;
-    }
-}
-
-
-@media (min-width: 425px) and (max-width: 768px){
-    .seccion{
         width: 100%;
-        height: 50%;
+        height: auto;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .carton{
+        width: 100%;
+        height: 70%;
+        margin-top: .2rem;
+        justify-content: center;
+        gap: .2rem 1rem;
+    }
+    .carton_num{
+        width: auto;
+        padding: .2rem .5rem;
+        font-size: 18px;
+        font-weight: 600;
     }
 
-    .carton{
-        height: 65%;
-        gap: .5rem; 
+    .contenedor_botones{
+        width: 100%;
+        height: 15%;        
     }
-    
-    .titulo{
-        padding: 0;
-        height: auto;
-        font-size: 16px;
-        font-weight: 500;
-        color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .carton_num{
-        width: 35%;
-        height: 0;
-        padding: .8rem 0;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    
     .boton_apostar{
-        width: 70%;
-        height: 1.8rem;
+        padding: .2rem 1.1rem;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 600;
     }
 }

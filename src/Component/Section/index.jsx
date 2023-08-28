@@ -1,4 +1,3 @@
-import "./Section.css"
 import Input from "../Input";
 import Button from "../Button"
 import { useState } from "react";
@@ -46,15 +45,15 @@ const Seccion=(props)=>{
         <h2 className="titulo">Haz tu apuesta! <br/> Elige 6 numeros del 0 al 45.</h2>
         <form className="carton" onSubmit={capturarNumeros}>
             <Input clase="carton_num" tipo="number" valor={num1} cambiarValor={setNum1} requerido={true} focus={true}/>
-            <Input clase="carton_num" tipo="number" valor={num2} cambiarValor={setNum2} requerido={true} />
-            <Input clase="carton_num" tipo="number" valor={num3} cambiarValor={setNum3} requerido={true} />
-            <Input clase="carton_num" tipo="number" valor={num4} cambiarValor={setNum4} requerido={true} />
-            <Input clase="carton_num" tipo="number" valor={num5} cambiarValor={setNum5} requerido={true} />
-            <Input clase="carton_num" tipo="number" valor={num6} cambiarValor={setNum6} requerido={true} />            
+            <Input clase="carton_num" tipo="number" valor={num2} cambiarValor={setNum2} requerido={true}/>
+            <Input clase="carton_num" tipo="number" valor={num3} cambiarValor={setNum3} requerido={true}/>
+            <Input clase="carton_num" tipo="number" valor={num4} cambiarValor={setNum4} requerido={true}/>
+            <Input clase="carton_num" tipo="number" valor={num5} cambiarValor={setNum5} requerido={true}/>
+            <Input clase="carton_num" tipo="number" valor={num6} cambiarValor={setNum6} requerido={true}/>            
             
            <div className="contenedor_botones">
             {boton===true
-                ?<Button clase="boton_apostar" tipo="submit" nombre="Confirmar Jugada"/>
+                ?<Button clase="boton_apostar" tipo="submit" nombre="¡JUGAR!"/>
                 :<></>
             }
             {boton2===true

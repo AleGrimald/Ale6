@@ -15,6 +15,8 @@ const Input = (props) =>{
             required={requerido}
             readOnly= {soloLectura}
             autoFocus={focus}
+            min={0}
+            max={45}
         />
     )
 }
