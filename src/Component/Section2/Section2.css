@@ -73,7 +73,7 @@
     transform: scale(1.2);
 }
 
-@media (min-width: 412px) and (max-width: 915px){
+@media (min-width: 320px) and (max-width: 470px){
     .seccion{
         width: 40%;
         height: 90%;
