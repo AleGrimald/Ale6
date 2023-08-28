@@ -6,8 +6,8 @@ const Seccion=(props)=>{
     const {numSorteo, verificar, fondo,boton2}= props;
     
     return <section className="seccion">
-        <h2 className="titulo">Numeros del sorteo!! <br/> Verifique las coinsidencias. </h2>
         <form className="carton" onSubmit={verificar}> 
+            <legend className="titulo">Numeros del sorteo!! <br/> Verifique las coinsidencias.</legend>
             {
                 numSorteo.map((sorteo, index=0)=><Input clase="carton_num" valor={sorteo} key={index} fondo={fondo[index]} soloLectura={true}/>)
             }

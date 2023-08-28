@@ -42,8 +42,8 @@ const Seccion=(props)=>{
     }
     
     return <section className="seccion">
-        <h2 className="titulo">Haz tu apuesta! <br/> Elige 6 numeros del 0 al 45.</h2>
         <form className="carton" onSubmit={capturarNumeros}>
+            <legend className="titulo">Haz tu apuesta! <br/> Elige 6 numeros del 0 al 45.</legend>
             <Input clase="carton_num" tipo="number" valor={num1} cambiarValor={setNum1} requerido={true} focus={true}/>
             <Input clase="carton_num" tipo="number" valor={num2} cambiarValor={setNum2} requerido={true}/>
             <Input clase="carton_num" tipo="number" valor={num3} cambiarValor={setNum3} requerido={true}/>
