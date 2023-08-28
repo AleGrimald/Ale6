@@ -19,14 +19,12 @@
 
 @media (min-width: 320px) and (max-width: 470px){
     .main  {
-        height: 500px;
+        height: 75vh;
         width: 100%;
         justify-content: space-around;
         align-items: center;
         padding: 0;
-        margin: auto;
         gap: 0;
-        flex-flow: row wrap;
         background-position-y: center;
         background-position-x: left;
     }
