@@ -1,11 +1,23 @@
 .footer{
     width:100%;
-    
-    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     border-top: 2px solid grey;
 }
 
+.contenedor_logo_footer{
+    width: 70%;
+}
 .footer_logo{
-    width: 10%;
+    width: 150px;
 
+}
+
+.contenedor_redes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    
 }

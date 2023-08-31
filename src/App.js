@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Component/Header';
 import Main from './Component/Main';
 import Footer from './Component/Footer';
+import Inicio from './Component/Inicio';
 import { useState } from 'react';
 
 function App() {
@@ -11,14 +12,7 @@ function App() {
   const [formulario, setFormulario] = useState(false);
   const [boton, setBoton] = useState(true);
   const [boton2, setBoton2] = useState(false);
-
-  //Lista con datos de botones
-  const listaBtn = [
-    {nombre: "Inicio",    link:"https://aleg6.netlify.app/", tipo:"submit"},
-    {nombre: "Ver Quini", link:"https://aleg6.netlify.app/", tipo:"submit"},
-    {nombre: "Apostar",   link:"https://aleg6.netlify.app/", tipo:"submit"},
-    {nombre: "Contacto",  link:"https://aleg6.netlify.app/", tipo:"submit"}
-  ];
+  const [carton, setCarton] = useState(false);
   
   //Genera un array de 6 elementos aleatorios
   const generarSorteo = ()=>{
@@ -81,28 +75,43 @@ function App() {
     
   }
 
+  //Controla cuando aparece y desaparece el carton y las reglas de jeugo, ademas cambia el nombre del boton Inicio y Jugar
+  const controlCarton=()=>{
+      setCarton(!carton);
+  }
+
+  //Lista con datos de botones
+  const listaBtn = [
+    {nombre: "Inicio",  link:"#", click: controlCarton},
+    {nombre: "Jugar",   link:"#", click: controlCarton},
+    {nombre: "Contacto",link:"#"}
+  ];
+
+
+
   return (
     <div className="App">
       <Header
         listaBotones={listaBtn}
+        control={carton}
       />
-      <Main
-        registrarApuesta={registrarApuesta}
-        sorteos={sorteos}
-        verificar={verificar}
-        colorFondo={colorFondo}
-        controlBoton={controlBoton}
-        controlBoton2={setBoton2}
-        formulario={formulario}
-        boton={boton}
-        boton2={boton2}
-      />
-      <Footer>
-        <h2>Pagina derechos reservados bla bla bla</h2>
-        
+      {
+        carton===false
+        ?<Inicio/>
+        :<Main
+          registrarApuesta={registrarApuesta}
+          sorteos={sorteos}
+          verificar={verificar}
+          colorFondo={colorFondo}
+          controlBoton={controlBoton}
+          controlBoton2={setBoton2}
+          formulario={formulario}
+          boton={boton}
+          boton2={boton2}
+        />
+      }
       
-       </Footer>
-
+      <Footer/>
     </div>
   );
 }
