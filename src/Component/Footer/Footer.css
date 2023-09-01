@@ -21,3 +21,32 @@
     gap: 1.5rem;
     
 }
+
+@media (min-width: 320px) and (max-width: 470px){
+    .footer{
+        width:100%;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+    }
+    
+    .contenedor_logo_footer{
+        width: 40%;
+        text-align: left;
+    }
+    .footer_logo{
+        width: 90px;
+    
+    }
+    
+    .contenedor_redes{
+        width: 50%;
+        gap: 1rem;
+        padding-right: 1rem;
+    }
+
+    .img_redes{
+        
+        width: 32px;
+        height: 32px;
+    }
+}

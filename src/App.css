@@ -1,7 +1,9 @@
 .App {
+  width: 100%;
   text-align: center;
   background: linear-gradient(180deg,rgb(242, 242, 242),rgb(197, 197, 197),rgba(133, 133, 133, 0.879));
   box-sizing: border-box;
+  
 }
 
 .App-logo {
