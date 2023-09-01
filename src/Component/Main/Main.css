@@ -19,7 +19,7 @@
 
 @media (min-width: 320px) and (max-width: 470px){
     .main  {
-        height: 100vh;
+        height: auto;
         justify-content: space-around;
         align-items: start;
         margin-top: 1.5rem;

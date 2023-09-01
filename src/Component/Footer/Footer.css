@@ -25,6 +25,7 @@
 @media (min-width: 320px) and (max-width: 470px){
     .footer{
         width:100%;
+        height: auto;
         justify-content: space-between;
         margin-top: 1.5rem;
     }
