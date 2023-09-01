@@ -2,7 +2,6 @@ import "./Footer.css"
 
 const Footer=()=>{
     return <footer className="footer">
-        <span></span>
         <div className="contenedor_logo_footer">
             <img className="footer_logo" src="logoquini6.png" alt="Logo del Quini 6"/>
         </div>
